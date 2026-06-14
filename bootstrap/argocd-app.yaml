@@ -10,7 +10,7 @@ spec:
     repoURL: 'https://github.com/MosheBittan/my-app-gitops.git'
     targetRevision: HEAD
     # The path inside the repository where the Helm chart lives
-    path: my-app
+    path: app/dev
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
