@@ -8,7 +8,7 @@ spec:
   source:
     chart: jenkins
     repoURL: https://charts.jenkins.io
-    targetRevision: 5.9.25# Use the latest stable version
+    targetRevision: 5.9.25 # Use the latest stable version
     helm:
       releaseName: jenkins
       # You can pass values here to configure Jenkins plugins, admin password, etc.
