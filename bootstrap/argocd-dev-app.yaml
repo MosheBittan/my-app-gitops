@@ -4,13 +4,13 @@ metadata:
   name: my-python-app-dev
   namespace: argocd
 spec:
-  destination:
-    server: 'https://kubernetes.default.svc'
-    namespace: default
-  project: default
   source:
     repoURL: 'https://github.com/MosheBittan/my-app-gitops.git'
     targetRevision: HEAD
     path: app/dev
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  project: default
   syncPolicy:
     automated: {prune: true, selfHeal: true}
