@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-python-app-prod
+  namespace: argocd
+spec:
+  source:
+    repoURL: 'https://github.com/MosheBittan/my-app-gitops.git'
+    targetRevision: HEAD
+    path: app/prod
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  project: default
+  syncPolicy:
+    automated: {prune: true, selfHeal: true}
