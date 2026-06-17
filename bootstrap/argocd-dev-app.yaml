@@ -10,7 +10,7 @@ spec:
     path: app/dev
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: default
+    namespace: my-app-dev
   project: default
   syncPolicy:
     automated: {prune: true, selfHeal: true}
